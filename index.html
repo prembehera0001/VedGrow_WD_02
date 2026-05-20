@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unit Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Unit Converter</h1>
+
+        <div class="converter-box">
+
+            <label for="category">Category</label>
+
+            <select id="category">
+
+                <option>Temperature</option>
+                <option>Length</option>
+                <option>Weight</option>
+
+            </select>
+
+
+            <label for="value">Enter Value</label>
+
+            <input type="number" placeholder="Enter number">
+
+
+            <div class="unit-row">
+
+                <div class="unit-box">
+
+                    <label>From</label>
+
+                    <select>
+
+                        <option>Celsius</option>
+                        <option>Fahrenheit</option>
+                        <option>Kelvin</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="unit-box">
+
+                    <label>To</label>
+
+                    <select>
+
+                        <option>Fahrenheit</option>
+                        <option>Celsius</option>
+                        <option>Kelvin</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <p>Result: --</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="history-box">
+
+            <h2>Recent Conversions</h2>
+
+            <p>No conversions yet</p>
+
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
