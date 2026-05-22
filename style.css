@@ -74,6 +74,28 @@ input{
     margin-top: 10px;
 }
 
+.result-heading{
+    text-align: center;
+
+    margin-top: 20px;
+
+    margin-bottom: 12px;
+
+    font-size: 24px;
+
+    color: #1f2937;
+}
+
+.result-box p{
+    text-align: center;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+}
+
 .result-box p{
     font-size: 18px;
 
