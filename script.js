@@ -8,6 +8,10 @@ const toUnit = document.getElementById("to-unit");
 
 const result = document.getElementById("result");
 
+const historyList = document.getElementById("history-list");
+
+const clearHistoryBtn = document.getElementById("clear-history");
+
 const units = {
 
 
@@ -163,9 +167,43 @@ function convertUnits(){
 
     result.textContent = output.toFixed(2);
 
+    let historyText = `${value} ${from} → ${to} = ${output.toFixed(2)}`;
+
+saveHistory(historyText);
 }
 
+function saveHistory(text){
 
+    let history = JSON.parse(localStorage.getItem("conversionHistory")) || [];
+
+    history.unshift(text);
+
+    if(history.length > 5){
+        history.pop();
+    }
+
+    localStorage.setItem("conversionHistory", JSON.stringify(history));
+
+    displayHistory();
+}
+
+function displayHistory(){
+
+    let history = JSON.parse(localStorage.getItem("conversionHistory")) || [];
+
+    historyList.innerHTML = "";
+
+    history.forEach(item => {
+
+        let li = document.createElement("li");
+
+        li.textContent = item;
+
+        historyList.appendChild(li);
+
+    });
+
+}
 
 category.addEventListener("change", () => {
 
@@ -188,3 +226,13 @@ toUnit.addEventListener("change", convertUnits);
 
 
 updateUnits();
+
+displayHistory();
+
+clearHistoryBtn.addEventListener("click", () => {
+
+    localStorage.removeItem("conversionHistory");
+
+    displayHistory();
+
+});

@@ -96,11 +96,7 @@ input{
     color: #2563eb;
 }
 
-.result-box p{
-    font-size: 18px;
 
-    font-weight: 500;
-}
 
 .history-box{
     margin-top: 30px;
@@ -122,6 +118,50 @@ input{
 
 .history-box p{
     color: #6b7280;
+}
+
+#history-list{
+    list-style: none;
+
+    margin-top: 15px;
+}
+
+#history-list li{
+    background-color: #f3f4f6;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    margin-bottom: 10px;
+
+    font-size: 15px;
+}
+
+#clear-history{
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#clear-history:hover{
+    background-color: #1d4ed8;
 }
 
 
