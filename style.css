@@ -54,6 +54,34 @@ input{
     font-size: 15px;
 }
 
+#convert-btn{
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#convert-btn:hover{
+    background-color: #1d4ed8;
+}
+
 .unit-row{
     display: flex;
 

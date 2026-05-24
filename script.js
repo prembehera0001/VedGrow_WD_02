@@ -12,6 +12,8 @@ const historyList = document.getElementById("history-list");
 
 const clearHistoryBtn = document.getElementById("clear-history");
 
+const convertBtn = document.getElementById("convert-btn");
+
 const units = {
 
 
@@ -167,9 +169,7 @@ function convertUnits(){
 
     result.textContent = output.toFixed(2);
 
-    let historyText = `${value} ${from} → ${to} = ${output.toFixed(2)}`;
-
-saveHistory(historyText);
+   
 }
 
 function saveHistory(text){
@@ -234,5 +234,27 @@ clearHistoryBtn.addEventListener("click", () => {
     localStorage.removeItem("conversionHistory");
 
     displayHistory();
+
+});
+
+convertBtn.addEventListener("click", () => {
+
+    convertUnits();
+
+    if(inputValue.value === ""){
+        return;
+    }
+
+    let value = Number(inputValue.value);
+
+    let from = fromUnit.value;
+
+    let to = toUnit.value;
+
+    let output = result.textContent;
+
+    let historyText = `${value} ${from} → ${to} = ${output}`;
+
+    saveHistory(historyText);
 
 });
