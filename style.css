@@ -5,8 +5,8 @@
 }
 
 body{
-    font-family: Arial, sans-serif;
-    background-color: #f4f7fb;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #eef2ff, #f8fafc);
     color: #1f2937;
 }
 
@@ -18,8 +18,16 @@ body{
 
 h1{
     text-align: center;
+
     margin-bottom: 30px;
+
+    font-size: 42px;
+
+    color: #2563eb;
+
+    letter-spacing: 1px;
 }
+
 
 .converter-box{
     background-color: white;
@@ -29,6 +37,12 @@ h1{
     border-radius: 12px;
 
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.converter-box:hover{
+    transform: translateY(-3px);
 }
 
 label{
@@ -136,6 +150,12 @@ input{
     border-radius: 12px;
 
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.history-box:hover{
+    transform: translateY(-3px);
 }
 
 .history-box h2{

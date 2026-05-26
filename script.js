@@ -258,3 +258,9 @@ convertBtn.addEventListener("click", () => {
     saveHistory(historyText);
 
 });
+
+inputValue.addEventListener("wheel", (event) => {
+
+    event.target.blur();
+
+});
